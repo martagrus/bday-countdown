@@ -1,0 +1,90 @@
+body {
+    background-image: url("https://foter.com/photos/380/all-that-glitters-12.jpg");
+    font-family: 'Montserrat', sans-serif;
+}
+
+#container {
+    background-color: #190023;
+    margin: 15% 5% 5% 5%; 
+    height: 80vh;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 3px;
+    padding: 5%;
+}
+
+#counter {
+    color: white;
+}
+
+#counter span {
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    margin: 0 2.5%;
+    color: #190023;
+    background: white;
+    font-weight: bolder;
+    padding: 2%;
+    width: 20%;
+    border-radius: 7%;
+    box-sizing: border-box;
+}
+
+#counter:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#units span {
+    color: white;
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+span.turn {
+    animation: turn 0.7s ease forwards;
+}
+
+#today {
+    display: none;
+}
+
+@keyframes turn{
+    0%{transform: rotateX(0deg)}
+    100%{transform: rotateX(360deg)}
+}
+
+@media (min-width: 768px) {
+    #container {
+        margin: 7% 5% 5% 5%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    #counter span {
+        font-size: 55px;
+    }
+
+    #units span {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #container {
+        margin: 4% 5%;
+    }
+}
