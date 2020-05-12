@@ -17,7 +17,7 @@ animateClock = (span) => {
 }
 
 startTimer = (counter, birthday) => {
-    let timerInterval = setInterval( () => {
+    setInterval( () => {
         let counter = document.getElementById('counter');
         let timer = updateTimer(birthday);
 
@@ -26,15 +26,15 @@ startTimer = (counter, birthday) => {
             + '<span>' + timer.minutes + '</span>'
             + '<span>' + timer.seconds + '</span>';
 
-    let spans = counter.getElementsByTagName('span');
-    animateClock(spans[3]);
-    if(timer.seconds == 59) animateClock(spans[2]);
-    if(timer.minutes == 59 && timer.seconds == 59) animateClock(spans[1]);
-    if(timer.hours == 23 && timer.minutes == 59 && timer.seconds == 59) animateClock(spans[0]);
+        let spans = counter.getElementsByTagName('span');
+        animateClock(spans[3]);
+        if (timer.seconds == 59) animateClock(spans[2]);
+        if (timer.minutes == 59 && timer.seconds == 59) animateClock(spans[1]);
+        if (timer.hours == 23 && timer.minutes == 59 && timer.seconds == 59) animateClock(spans[0]);
 
-    if(timer.total < 1){
-        bdayToday();
-    }
+        if (timer.total < 1){
+            bdayToday();
+        }  
     }, 1000);   
 }
 
@@ -46,7 +46,8 @@ bdayToday = () => {
 }
 
 setBirthday = () => {
-    let birthday = new Date ('May 6, 2020 00:00:00');
+    let birthday = new Date ('May 6, 2021 00:00:00');
+
     startTimer('counter', birthday);
 }
 
